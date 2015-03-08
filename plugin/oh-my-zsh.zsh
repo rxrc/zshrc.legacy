@@ -19,12 +19,10 @@ if [[ -x `which -p virtualenvwrapper` ]]; then
   plugins+=( virtualenvwrapper )
 fi
 
+export OH_MY_ZSH_PLUGINS="$plugins"
+
 # Additional gems to be wrapped by bundler plugin.
-bundled_commands=(
+BUNDLED_COMMANDS=(
   rubocop
   curate
 )
-
-# Export variables for Oh-My-Zsh.
-export OH_MY_ZSH_PLUGINS="$plugins"
-export BUNDLED_COMMANDS="$bundled_commands"

@@ -46,6 +46,7 @@ elif [[ -d "${HOME}/.zgen/razor-x/zshrc-${BRANCH}" ]]; then
   source "${HOME}/.zgen/razor-x/zshrc-${BRANCH}/plugins.zsh"
 else
   zgen load razor-x/zshrc plugin $BRANCH
+  zgen update
   echo
   echo '  ✔ Installed zshrc as zgen plugin!'
   echo

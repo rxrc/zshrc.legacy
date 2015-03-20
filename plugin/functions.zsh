@@ -34,3 +34,7 @@ function vimupg () {
   vim -c PluginInstall -c quitall && \
   vim -c PluginClean -c quitall
 }
+
+function pyserver () {
+  python -m http.server $1
+}

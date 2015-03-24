@@ -26,3 +26,8 @@ BUNDLED_COMMANDS=(
   rubocop
   curate
 )
+
+# Start tmux on ssh login.
+if ! [[ -z "$SSH_CONNECTION" ]]; then
+  ZSH_TMUX_AUTOSTART=true
+fi

@@ -1,11 +1,5 @@
-function zshupg () {
-  if ! [[ -d ~/.zgen.zsh ]]; then
-    echo 'zgen is not installed.'
-    exit 1
-  fi
-
-  zgen selfupdate
-  zgen update
+function pyserver () {
+  python -m http.server $1
 }
 
 function tmuxupg () {
@@ -35,6 +29,12 @@ function vimupg () {
   vim -c PluginClean -c quitall
 }
 
-function pyserver () {
-  python -m http.server $1
+function zshupg () {
+  if ! [[ -d ~/.zgen.zsh ]]; then
+    echo 'zgen is not installed.'
+    exit 1
+  fi
+
+  zgen selfupdate
+  zgen update
 }

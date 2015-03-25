@@ -18,22 +18,22 @@ Overall configuration then follows a normal plugin structure.
 
 You can install this via the command-line with either curl
 
-````bash
+```bash
 curl -L https://io.evansosenko.com/zshrc/install.sh | sh
-````
+```
 
 or wget
 
-````bash
+```bash
 wget https://io.evansosenko.com/zshrc/install.sh -O - | sh
-````
+```
 
 ### Manual Install
 
 1. Install [zgen] to `~/.zgen.zsh/zgen.zsh`.
 2. Create `~/.zshrc` with
 
-````zsh
+```zsh
 # razor-x/zshrc
 
 source "${HOME}/.zgen.zsh/zgen.zsh"
@@ -55,7 +55,7 @@ else
   read -s -n 1
   exit 0
 fi
-````
+```
 
 ## Updating
 
@@ -79,9 +79,9 @@ You can customize this configuration or manage your own in the same way.
 
 Here is an example of a command you can use to make replacements:
 
-````bash
+```bash
 git ls-files -z | xargs -0 sed -i 's/razor-x\/zshrc/username\/zshrc/g'
-````
+```
 
 ## Contributing
 

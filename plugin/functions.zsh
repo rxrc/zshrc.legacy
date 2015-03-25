@@ -1,3 +1,8 @@
+function mirrorupg () {
+  sudo reflector -l 5 -c US \
+    --sort rate --save /etc/pacman.d/mirrorlist
+}
+
 function pyserver () {
   python -m http.server $1
 }

@@ -29,9 +29,9 @@ function vimupg () {
     return 1
   fi
 
-  vim -c PluginUpdate -c quitall  && \
-  vim -c PluginInstall -c quitall && \
-  vim -c PluginClean -c quitall
+  vim -c NeoBundleUpdate -c quitall  && \
+  vim -c NeoBundleInstall -c quitall && \
+  vim -c NeoBundleClean! -c quitall
 }
 
 function zshupg () {

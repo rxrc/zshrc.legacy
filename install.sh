@@ -2,7 +2,7 @@ set -e
 
 echo -e "\033[32m➤ Installing!   \033[0m"
 
-hash git >/dev/null 2>&1 \
+command -v git >/dev/null 2>&1 \
   && echo -e "\033[32m  ✔ Found         ❰ Git ❱   \033[0m" \
   || {
     echo -e "\033[31m  ✘ Missing       ❰ Git ❱   \033[0m"
@@ -15,7 +15,7 @@ if [ -d ~/.zgen.zsh ]; then
 else
   echo -e "  ➤ Installing    ❰ zgen ❱   \033[0m"
 
-  hash git >/dev/null 2>&1 && \
+  command -v git >/dev/null 2>&1 && \
     env git clone https://github.com/tarjoilija/zgen.git ~/.zgen.zsh >/dev/null 2>&1
 
   echo -e "\033[32m    ✔ Installed   ❰ zgen ❱   \033[0m"

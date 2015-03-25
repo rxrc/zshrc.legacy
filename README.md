@@ -19,13 +19,13 @@ Overall configuration then follows a normal plugin structure.
 You can install this via the command-line with either curl
 
 ```bash
-curl -L https://io.evansosenko.com/zshrc/install.sh | sh
+$ curl -L https://io.evansosenko.com/zshrc/install.sh | sh
 ```
 
 or wget
 
 ```bash
-wget https://io.evansosenko.com/zshrc/install.sh -O - | sh
+$ wget https://io.evansosenko.com/zshrc/install.sh -O - | sh
 ```
 
 ### Manual Install
@@ -80,7 +80,7 @@ You can customize this configuration or manage your own in the same way.
 Here is an example of a command you can use to make replacements:
 
 ```bash
-git ls-files -z | xargs -0 sed -i 's/razor-x\/zshrc/username\/zshrc/g'
+$ git ls-files -z | xargs -0 sed -i 's/razor-x\/zshrc/username\/zshrc/g'
 ```
 
 ## Contributing

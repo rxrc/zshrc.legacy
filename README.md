@@ -19,13 +19,13 @@ Overall configuration then follows a normal plugin structure.
 You can install this via the command-line with either curl
 
 ```bash
-$ curl -L https://io.evansosenko.com/zshrc/install.sh | sh
+$ curl -L https://git.io/jggP | sh
 ```
 
 or wget
 
 ```bash
-$ wget https://io.evansosenko.com/zshrc/install.sh -O - | sh
+$ wget https://git.io/jggP -O - | sh
 ```
 
 ### Manual Install

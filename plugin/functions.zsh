@@ -24,8 +24,8 @@ function tmuxupg () {
 }
 
 function vimupg () {
-  if ! [[ -d ~/.vim/bundle/Vundle.vim ]]; then
-    echo 'Vundle is not installed.'
+  if ! [[ -d ~/.vim/bundle/neobundle.vim ]]; then
+    echo 'NeoBundle is not installed.'
     return 1
   fi
 

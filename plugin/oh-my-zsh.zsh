@@ -21,6 +21,9 @@ fi
 
 export OH_MY_ZSH_PLUGINS="$plugins"
 
+# Disable auto update.
+DISABLE_AUTO_UPDATE='true'
+
 # Additional gems to be wrapped by bundler plugin.
 BUNDLED_COMMANDS=(
   rubocop

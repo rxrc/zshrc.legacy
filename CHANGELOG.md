@@ -2,9 +2,8 @@
 
 ## HEAD
 
-- Start tmux on ssh login.
-- Add mirrorupg and pyserver functions.
-- Use NeoBundle in vimupg.
+- Create XDG cache directory.
+- Set history file location.
 
 ## 0.1.0
 

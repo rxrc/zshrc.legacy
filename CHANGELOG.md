@@ -3,6 +3,7 @@
 ## HEAD
 
 - Create XDG cache directory.
+- Set history file location.
 
 ## 0.1.0
 

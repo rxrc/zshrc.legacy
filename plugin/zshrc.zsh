@@ -4,3 +4,6 @@ if [[ -z "$XDG_CACHE_HOME" ]]; then
 fi
 
 mkdir -p $XDG_CACHE_HOME/zsh
+
+# Set history file.
+HISTFILE=$XDG_CACHE_HOME/zsh/history

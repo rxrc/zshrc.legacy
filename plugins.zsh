@@ -9,5 +9,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/$plugin
   done
 
+  zgen load razor-x/oh-my-zsh plugins/systemd systemd
+
   zgen save
 fi

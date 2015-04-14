@@ -1,5 +1,5 @@
 function mirrorupg () {
-  sudo reflector -l 5 -c US \
+  sudo reflector -l 5 -c US -p https \
     --sort rate --save /etc/pacman.d/mirrorlist
 }
 

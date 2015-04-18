@@ -4,7 +4,7 @@ plugins=(
   cp extract rsync
   tmux tmuxinator
   git github
-  rbenv ruby gem rails rake bundler
+  rbenv ruby gem rake bundler
   knife vagrant
   heroku
   bower

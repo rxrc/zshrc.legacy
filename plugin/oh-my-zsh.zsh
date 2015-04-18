@@ -9,6 +9,7 @@ plugins=(
   heroku
   bower
   pip
+  vim-interaction
 )
 
 if [[ -x `which -p pacman` ]]; then

@@ -4,12 +4,11 @@ plugins=(
   cp extract rsync
   tmux tmuxinator
   git github
-  python
   rbenv ruby gem rake bundler
   knife vagrant
   heroku
   bower
-  pip
+  python pip
   vim-interaction
 )
 

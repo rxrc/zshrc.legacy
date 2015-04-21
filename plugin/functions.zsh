@@ -7,6 +7,10 @@ function pyserver () {
   python -m http.server $1
 }
 
+function tarz () {
+  tar -czf $1.tar.gz $1
+}
+
 function tmuxupg () {
   if ! [[ -d ~/.tmux/plugins/tpm ]]; then
     echo 'tpm is not installed.'

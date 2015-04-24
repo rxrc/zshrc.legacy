@@ -33,9 +33,19 @@ function vimupg () {
     return 1
   fi
 
-  vim -c NeoBundleUpdate -c quitall  && \
-  vim -c NeoBundleInstall -c quitall && \
-  vim -c NeoBundleClean! -c quitall
+  vimrc=$HOME/.vimrc
+
+  vim -N -u $vimrc -c \
+    "try | NeoBundleUpdate $* | finally | qall! | endtry" \
+    -U NONE -i NONE -V1 -e -s
+
+  vim -N -u $vimrc -c \
+    "try | NeoBundleInstall $* | finally | qall! | endtry" \
+    -U NONE -i NONE -V1 -e -s
+
+  vim -N -u $vimrc -c \
+    "try | NeoBundleClean! $* | finally | qall! | endtry" \
+    -U NONE -i NONE -V1 -e -s
 }
 
 function zshupg () {

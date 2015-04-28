@@ -84,6 +84,43 @@ Here is an example of a command you can use to make replacements:
 $ git ls-files -z | xargs -0 sed -i 's/razor-x\/zshrc/username\/zshrc/g'
 ```
 
+## Development
+
+You can use [Gulp] to switch to development mode
+which will configure zgen to use the development
+directory as the plugin path.
+
+First, follow the normal install steps if you haven't already.
+Then, install the development dependences via [npm] with
+
+```bash
+$ [sudo] npm install --global gulp
+$ npm install
+```
+
+Enter development mode with
+
+```bash
+$ gulp dev
+$ gulp install
+```
+
+Have gulp watch for changes with
+
+```bash
+$ gulp
+```
+
+To switch out of development mode run
+
+```bash
+$ gulp nodev
+```
+
+[Gulp]: http://gulpjs.com/
+[npm]: https://www.ruby-lang.org/en/
+
+
 ## Contributing
 
 Please submit and comment on bug reports and feature requests.

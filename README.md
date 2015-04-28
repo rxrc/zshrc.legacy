@@ -38,14 +38,14 @@ $ wget https://git.io/jggP -O - | sh
 
 source "${HOME}/.zgen.zsh/zgen.zsh"
 
-BRANCH='master'
+branch='master'
 
-if [[ -d "${HOME}/.zgen/local/zshrc-${BRANCH}" ]]; then
-  source "${HOME}/.zgen/local/zshrc-${BRANCH}/plugins.zsh"
-elif [[ -d "${HOME}/.zgen/razor-x/zshrc-${BRANCH}" ]]; then
-  source "${HOME}/.zgen/razor-x/zshrc-${BRANCH}/plugins.zsh"
+if [[ -d "${HOME}/.zgen/local/zshrc-${branch}" ]]; then
+  source "${HOME}/.zgen/local/zshrc-${branch}/plugins.zsh"
+elif [[ -d "${HOME}/.zgen/razor-x/zshrc-${branch}" ]]; then
+  source "${HOME}/.zgen/razor-x/zshrc-${branch}/plugins.zsh"
 else
-  zgen load razor-x/zshrc plugin $BRANCH
+  zgen load razor-x/zshrc plugin $branch
   zgen update
   echo
   echo '  ✔ Installed zshrc as zgen plugin!'

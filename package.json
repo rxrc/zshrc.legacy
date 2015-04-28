@@ -17,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/razor-x/zshrc/issues"
   },
-  "homepage": "https://github.com/razor-x/zshrc"
+  "homepage": "https://github.com/razor-x/zshrc",
+  "devDependencies": {
+    "coffee-script": "^1.9.0",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-replace": "^0.5.2",
+    "gulp-watch": "^4.1.1",
+    "home-path": "^0.1.1"
+  }
 }

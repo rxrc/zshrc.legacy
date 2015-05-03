@@ -11,6 +11,11 @@ function pyserver () {
   python -m http.server $1
 }
 
+function sslgen-cert-test () {
+  openssl req -new -x509 -nodes -newkey rsa:2048 -keyout $1.key -out $1.pem -days 36524 \
+    -subj "/C=US/ST=California/L=San Francisco/O=Example Inc./CN=$1/emailAddress=webmaster@example.com"
+}
+
 function tarz () {
   tar -czf $1.tar.gz $1
 }

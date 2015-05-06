@@ -1,7 +1,7 @@
 if ! zgen saved; then
   echo "Creating a zgen save".
 
-  zgen load razor-x/zshrc plugin/exports.zsh
+  zgen load razor-x/zshrc plugin exports
   zgen load razor-x/zshrc plugin
   zgen oh-my-zsh
 

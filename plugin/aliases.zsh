@@ -4,6 +4,9 @@
 # ack is ack-grep on some systems.
 [[ -x `which -p ack-grep` ]] && alias ack='ack-grep'
 
+# Have WeeChat use ~/.config/weechat.
+alias weechat="weechat -d ${XDG_CONFIG_HOME}/weechat"
+
 # Fixes a bug with rake and square brackets.
 alias rake='noglob bundle exec rake'
 

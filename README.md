@@ -19,13 +19,13 @@ Overall configuration then follows a normal plugin structure.
 You can install this via the command-line with either curl
 
 ```bash
-$ curl -L https://git.io/jggP | sh
+$ curl -L https://git.io/vJAEY | sh
 ```
 
 or wget
 
 ```bash
-$ wget https://git.io/jggP -O - | sh
+$ wget https://git.io/vJAEY -O - | sh
 ```
 
 ### Manual Install

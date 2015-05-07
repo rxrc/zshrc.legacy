@@ -1,7 +1,7 @@
 if ! zgen saved; then
   echo "Creating a zgen save".
 
-  zgen load razor-x/zshrc plugin
+  zgen load rxrc/zshrc plugin
   zgen oh-my-zsh
 
   OH_MY_ZSH_PLUGINS=(${(ps: :)${OH_MY_ZSH_PLUGINS}})
@@ -9,7 +9,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/$plugin
   done
 
-  zgen load razor-x/oh-my-zsh plugins/systemd systemd
+  zgen load rxrc/oh-my-zsh plugins/systemd systemd
 
   zgen save
 fi

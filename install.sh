@@ -23,7 +23,7 @@ fi
 
 if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
   ZSHRC_LINE=$(head -n 1 ~/.zshrc);
-  if [ "$ZSHRC_LINE" != '# razor-x/zshrc' ]; then
+  if [ "$ZSHRC_LINE" != '# rxrc/zshrc' ]; then
     echo -e "  ➤  Exists       ❰ ~/.zshrc ❱   \033[0m"
 
     mv ~/.zshrc ~/.zshrc.preinstall
@@ -37,7 +37,7 @@ fi
 echo -e "  ➤ Installing    ❰ ~/.zshrc ❱   \033[0m"
 
 tee ~/.zshrc >/dev/null <<EOF
-# razor-x/zshrc
+# rxrc/zshrc
 
 source "\${HOME}/.zgen.zsh/zgen.zsh"
 
@@ -45,10 +45,10 @@ branch='master'
 
 if [[ -d "\${HOME}/.zgen/local/zshrc-\${branch}" ]]; then
   source "\${HOME}/.zgen/local/zshrc-\${branch}/plugins.zsh"
-elif [[ -d "\${HOME}/.zgen/razor-x/zshrc-\${branch}" ]]; then
-  source "\${HOME}/.zgen/razor-x/zshrc-\${branch}/plugins.zsh"
+elif [[ -d "\${HOME}/.zgen/rxrc/zshrc-\${branch}" ]]; then
+  source "\${HOME}/.zgen/rxrc/zshrc-\${branch}/plugins.zsh"
 else
-  zgen load razor-x/zshrc plugin \$branch
+  zgen load rxrc/zshrc plugin \$branch
   zgen update
   echo
   echo '  ✔ Installed zshrc as zgen plugin!'

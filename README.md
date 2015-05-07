@@ -1,6 +1,6 @@
 # Zsh Configuration
 
-[![MIT License](https://img.shields.io/badge/license-MIT-red.svg)](./LICENSE.txt)
+[![MIT License](https://img.shields.io/github/license/rxrc/zshrc.svg)](./LICENSE.txt)
 
 My complete Zsh configuration as a Zsh plugin.
 

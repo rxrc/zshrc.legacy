@@ -7,7 +7,7 @@ child_process = require('child_process')
 homePath = require('home-path')()
 $ = require('gulp-load-plugins')()
 
-repoPath = 'razor-x/zshrc'
+repoPath = 'rxrc/zshrc'
 branchInitial = 'master'
 
 branch = "#{child_process.execSync('git rev-parse --abbrev-ref HEAD')}".trim()

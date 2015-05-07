@@ -5,7 +5,7 @@
   "description": "Zsh configuration.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/razor-x/zshrc.git"
+    "url": "https://github.com/rxrc/zshrc.git"
   },
   "keywords": [
     "zsh",
@@ -15,9 +15,9 @@
   "author": "Evan Sosenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/razor-x/zshrc/issues"
+    "url": "https://github.com/rxrc/zshrc/issues"
   },
-  "homepage": "https://github.com/razor-x/zshrc",
+  "homepage": "https://github.com/rxrc/zshrc",
   "devDependencies": {
     "coffee-script": "^1.9.0",
     "del": "^1.1.1",

@@ -1,11 +1,3 @@
-function ghcl () {
-  git clone git@github.com:$1.git
-}
-
-function gitsed () {
-  git ls-files -z | xargs -0 sed -i $1
-}
-
 function mirrorupg () {
   sudo reflector --verbose -l 5 -c US -p https \
     --sort rate --save /etc/pacman.d/mirrorlist

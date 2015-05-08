@@ -1,21 +1,26 @@
+# Update Arch Linux mirrorlist.
 function mirrorupg () {
   sudo reflector --verbose -l 5 -c US -p https \
     --sort rate --save /etc/pacman.d/mirrorlist
 }
 
+# Start a local http server.
 function pyserver () {
   python -m http.server $1
 }
 
+# Generate an SSL certificate for test use only.
 function sslgen-cert-test () {
   openssl req -new -x509 -nodes -newkey rsa:2048 -keyout $1.key -out $1.pem -days 36524 \
     -subj "/C=US/ST=California/L=San Francisco/O=Example Inc./CN=$1/emailAddress=webmaster@example.com"
 }
 
+# Create a new tar archive.
 function tarz () {
   tar -czf $1.tar.gz $1
 }
 
+# Upgrade tmuxrc.
 function tmuxupg () {
   if ! [[ -d ~/.tmux/plugins/tpm ]]; then
     echo 'tpm is not installed.'
@@ -32,6 +37,7 @@ function tmuxupg () {
   ~/.tmux/plugins/tpm/scripts/update_plugin.sh all
 }
 
+# Upgrade vimrc.
 function vimupg () {
   if ! [[ -d ~/.vim/bundle/neobundle.vim ]]; then
     echo 'NeoBundle is not installed.'
@@ -53,6 +59,7 @@ function vimupg () {
     -U NONE -i NONE -V1 -e -s
 }
 
+# Upgrade zshrc.
 function zshupg () {
   if ! [[ -d ~/.zgen.zsh ]]; then
     echo 'zgen is not installed.'

@@ -46,7 +46,13 @@ gulp.task 'install', ->
 
 gulp.task 'watch', ['install'], ->
   $.watch ['./*.zsh', './plugin/**/*.zsh'], (file) ->
-    if file.event is 'unlink' then del(file.path, {force: true})
+    if file.event is 'add'
+      zgenReset()
+
+    if file.event is 'unlink'
+      del(file.path, {force: true})
+      zgenReset()
+
     if file.relative is 'plugins.zsh' then zgenReset()
   .pipe $.replace(
     "zgen load #{repoPath} plugin"

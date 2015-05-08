@@ -1,5 +1,6 @@
 # Zsh Configuration
 
+[![Release](https://img.shields.io/github/release/rxrc/zshrc.svg)](https://github.com/rxrc/zshrc/releases)
 [![MIT License](https://img.shields.io/github/license/rxrc/zshrc.svg)](./LICENSE.txt)
 
 My complete Zsh configuration as a Zsh plugin.

@@ -10,38 +10,38 @@ command -v git >/dev/null 2>&1 \
     exit 1
   }
 
-if [ -d ~/.zgen.zsh ]; then
+if [ -d $HOME/.zgen.zsh ]; then
   echo -e "\033[32m  ✔ Found         ❰ zgen ❱   \033[0m"
 else
   echo -e "  ➤ Installing    ❰ zgen ❱   \033[0m"
 
   command -v git >/dev/null 2>&1 && \
-    env git clone https://github.com/tarjoilija/zgen.git ~/.zgen.zsh >/dev/null 2>&1
+    env git clone https://github.com/tarjoilija/zgen.git $HOME/.zgen.zsh >/dev/null 2>&1
 
   echo -e "\033[32m    ✔ Installed   ❰ zgen ❱   \033[0m"
 fi
 
-if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
-  ZSHRC_LINE=$(head -n 1 ~/.zshrc);
+if [ -f $HOME/.zshrc ] || [ -h $HOME/.zshrc ]; then
+  ZSHRC_LINE=$(head -n 1 $HOME/.zshrc);
   if [ "$ZSHRC_LINE" != '# rxrc/zshrc' ]; then
     echo -e "  ➤  Exists       ❰ ~/.zshrc ❱   \033[0m"
 
-    mv ~/.zshrc ~/.zshrc.preinstall
+    mv $HOME/.zshrc $HOME/.zshrc.preinstall
 
     echo -e "\033[32m    ✔ Moved to    ❰ ~/.zshrc.preinstall ❱   \033[0m"
   else
-    rm ~/.zshrc
+    rm $HOME/.zshrc
   fi
 fi
 
 echo -e "  ➤ Installing    ❰ ~/.zshrc ❱   \033[0m"
 
-tee ~/.zshrc >/dev/null <<EOF
+tee $HOME/.zshrc >/dev/null <<EOF
 # rxrc/zshrc
 
-source "\${HOME}/.zgen.zsh/zgen.zsh"
+branch="\${ZSHRC_BRANCH:-master}"
 
-branch='master'
+source "\${HOME}/.zgen.zsh/zgen.zsh"
 
 if [[ -d "\${HOME}/.zgen/local/zshrc-\${branch}" ]]; then
   source "\${HOME}/.zgen/local/zshrc-\${branch}/plugins.zsh"

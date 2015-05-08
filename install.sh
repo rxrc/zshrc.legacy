@@ -39,9 +39,9 @@ echo -e "  ➤ Installing    ❰ ~/.zshrc ❱   \033[0m"
 tee $HOME/.zshrc >/dev/null <<EOF
 # rxrc/zshrc
 
-source "\${HOME}/.zgen.zsh/zgen.zsh"
+branch="\${ZSHRC_BRANCH:-master}"
 
-branch='master'
+source "\${HOME}/.zgen.zsh/zgen.zsh"
 
 if [[ -d "\${HOME}/.zgen/local/zshrc-\${branch}" ]]; then
   source "\${HOME}/.zgen/local/zshrc-\${branch}/plugins.zsh"

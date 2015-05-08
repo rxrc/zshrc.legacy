@@ -12,11 +12,11 @@ plugins=(
   vim-interaction
 )
 
-if [[ -x `which -p pacman` ]]; then
+if [[ -x `command -v pacman` ]]; then
   plugins+=( archlinux systemd )
 fi
 
-if [[ -x `which -p virtualenvwrapper` ]]; then
+if [[ -x `command -v virtualenvwrapper` ]]; then
   plugins+=( virtualenvwrapper )
 fi
 

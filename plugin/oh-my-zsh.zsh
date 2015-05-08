@@ -12,7 +12,7 @@ plugins=(
   vim-interaction
 )
 
-if [[ -x $(command -v pacman) ]]; then
+if [[ -f /etc/arch-release ]]; then
   plugins+=( archlinux systemd )
 fi
 

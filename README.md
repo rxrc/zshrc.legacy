@@ -62,6 +62,14 @@ fi
 
 Updating is handled via the normal [zgen] update commands.
 
+## promptline.vim
+
+This configuration will load `~/.promptline.zsh`
+which can be generated or updated using [promptline.vim]
+by running `:PromptlineSnapshot! ~/.promptline.zsh` from Vim.
+
+[promptline.vim]: https://github.com/edkolev/promptline.vim
+
 ## Customization
 
 You can customize this configuration or manage your own in the same way.

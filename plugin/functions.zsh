@@ -32,7 +32,7 @@ function tarz () {
 
 # Upgrade tmuxrc.
 function tmuxupg () {
-  if ! [[ -d ~/.tmux/plugins/tpm ]]; then
+  if ! [[ -d $HOME/.tmux/plugins/tpm ]]; then
     echo 'tpm is not installed.'
     return 1
   fi
@@ -42,14 +42,14 @@ function tmuxupg () {
     return 2
   fi
 
-  ~/.tmux/plugins/tpm/scripts/update_plugin.sh all && \
-  ~/.tmux/plugins/tpm/scripts/install_plugins.sh   && \
-  ~/.tmux/plugins/tpm/scripts/update_plugin.sh all
+  $HOME/.tmux/plugins/tpm/scripts/update_plugin.sh all && \
+  $HOME/.tmux/plugins/tpm/scripts/install_plugins.sh   && \
+  $HOME/.tmux/plugins/tpm/scripts/update_plugin.sh all
 }
 
 # Upgrade vimrc.
 function vimupg () {
-  if ! [[ -d ~/.vim/bundle/neobundle.vim ]]; then
+  if ! [[ -d $HOME/.vim/bundle/neobundle.vim ]]; then
     echo 'NeoBundle is not installed.'
     return 1
   fi
@@ -71,7 +71,7 @@ function vimupg () {
 
 # Upgrade zshrc.
 function zshupg () {
-  if ! [[ -d ~/.zgen.zsh ]]; then
+  if ! [[ -d $HOME/.zgen.zsh ]]; then
     echo 'zgen is not installed.'
     exit 1
   fi

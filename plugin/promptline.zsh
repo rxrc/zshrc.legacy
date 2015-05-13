@@ -1,4 +1,4 @@
 # Load promptline.vim.
-if [[ -e ~/.promptline.zsh ]]; then
-  source ~/.promptline.zsh
+if [[ -e $HOME/.promptline.zsh ]]; then
+  source $HOME/.promptline.zsh
 fi

@@ -19,11 +19,11 @@ if [[ -d /opt/android-sdk/platform-tools ]]; then
 fi
 
 # Add local binaries to path.
-if [[ -d ~/.local/bin ]]; then
+if [[ -d $HOME/.local/bin ]]; then
   PATH=$HOME/.local/bin:$PATH
 fi
 
 # Add Cabal installed binaries to path.
-if [[ -d ~/.cabal ]]; then
+if [[ -d $HOME/.cabal ]]; then
   PATH=$HOME/.cabal/bin:$PATH
 fi

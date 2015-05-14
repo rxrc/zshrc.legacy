@@ -23,6 +23,11 @@ if [[ -d $HOME/.local/bin ]]; then
   PATH=$HOME/.local/bin:$PATH
 fi
 
+# Add npm installed binaries to path.
+if [[ -d $HOME/.npm/bin ]]; then
+  PATH=$HOME/.npm/bin:$PATH
+fi
+
 # Add Cabal installed binaries to path.
 if [[ -d $HOME/.cabal ]]; then
   PATH=$HOME/.cabal/bin:$PATH

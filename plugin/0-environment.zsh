@@ -8,6 +8,11 @@ export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
 export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CACHE_HOME=$HOME/.cache
 
+# Set ssh-agent socket.
+if [[ -S $XDG_RUNTIME_DIR/ssh-agent.socket ]]; then
+  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
+
 # Add Android tools to path.
 if [[ -d /opt/android-sdk/tools ]]; then
   PATH=$PATH:/opt/android-sdk/tools

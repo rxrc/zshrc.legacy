@@ -1,6 +1,9 @@
 # Always use vim.
 [[ -x $(command -v vim) ]] && alias vi='vim'
 
+# Additional vim aliases.
+[[ -x $(command -v gvim) ]] && alias vv='gvim'
+
 # ack is ack-grep on some systems.
 [[ -x $(command -v ack-grep) ]] && alias ack='ack-grep'
 

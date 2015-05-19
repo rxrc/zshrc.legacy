@@ -8,6 +8,9 @@ export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
 export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CACHE_HOME=$HOME/.cache
 
+# Set kitchen-sync transfer mode.
+export KITCHEN_SYNC_MODE=rsync
+
 # Set ssh-agent socket.
 if [[ -S $XDG_RUNTIME_DIR/ssh-agent.socket ]]; then
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

@@ -4,6 +4,7 @@ plugins=(
   cp extract rsync
   tmux tmuxinator
   git github
+  nvm
   rbenv ruby gem rake bundler
   knife vagrant
   heroku

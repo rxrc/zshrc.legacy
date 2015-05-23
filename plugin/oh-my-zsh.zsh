@@ -5,12 +5,11 @@ plugins=(
   tmux tmuxinator
   git github
   nvm
-  pyenv
   rbenv ruby gem rake bundler
   knife vagrant
   heroku
   bower
-  python pip
+  pyenv python pip
   vim-interaction
 )
 

@@ -10,6 +10,7 @@ plugins=(
   heroku
   bower
   pyenv python pip
+  golang
   vim-interaction
 )
 

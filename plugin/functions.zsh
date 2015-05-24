@@ -1,3 +1,22 @@
+# Find: [f]ile by name.
+function ff () {
+  if ! [[ -n "$1" ]]; then
+    echo 'Must specify a search string.'
+    return 1
+  fi
+
+  find . -name "$1"
+}
+
+# Find: name [a]ll.
+function fa () { ff "*${1}*" }
+
+# Find: name [s]tarts with.
+function fs () { ff "${1}*" }
+
+# Find name [e]nds with.
+function fe () { ff "*${1}" }
+
 # Update Arch Linux mirrorlist.
 function mirrorupg () {
   sudo reflector --verbose -l 5 -c US -p https \

@@ -5,7 +5,7 @@ function ghcl () {
     return 1
   fi
 
-  git clone git@github.com:$1.git
+  git clone git@github.com:$1.git $2
 }
 
 # Run sed in-place on all tracked files.

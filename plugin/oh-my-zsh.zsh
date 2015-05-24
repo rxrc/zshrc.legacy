@@ -11,6 +11,7 @@ plugins=(
   bower
   pyenv python pip
   golang
+  lein
   vim-interaction
 )
 

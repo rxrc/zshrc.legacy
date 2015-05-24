@@ -8,6 +8,11 @@ export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
 export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CACHE_HOME=$HOME/.cache
 
+# Set Go path.
+if [[ -d $HOME/go ]]; then
+  export GOPATH="$HOME/go"
+fi
+
 # Set kitchen-sync transfer mode.
 export KITCHEN_SYNC_MODE=rsync
 
@@ -29,6 +34,11 @@ fi
 # Add local binaries to path.
 if [[ -d $HOME/.local/bin ]]; then
   PATH=$HOME/.local/bin:$PATH
+fi
+
+# Add Go binaries to path.
+if [[ -d $GOPATH//bin ]]; then
+  PATH=$GOPATH/bin:$PATH
 fi
 
 # Add npm installed binaries to path.

@@ -8,7 +8,7 @@
 [[ -x $(command -v ack-grep) ]] && alias ack='ack-grep'
 
 # Copy to clipboard with xclip.
-[[ -x $(command -v xclip ) ]] && alias cb='xclip -selection c'
+[[ -x $(command -v xclip ) ]] && alias cb='xclip -selection clipboard'
 
 # Fixes a bug with rake and square brackets.
 alias rake='noglob bundle exec rake'

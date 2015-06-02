@@ -62,6 +62,21 @@ fi
 
 Updating is handled via the normal [zgen] update commands.
 
+Here is an example of a Zsh function that will provide a one-step update:
+
+```zsh
+# Upgrade zshrc.
+function zshupg () {
+  if ! [[ -d $HOME/.zgen.zsh ]]; then
+    echo 'zgen is not installed.'
+    exit 1
+  fi
+
+  zgen selfupdate
+  zgen update
+}
+```
+
 ## Customization
 
 You can customize this configuration or manage your own in the same way.

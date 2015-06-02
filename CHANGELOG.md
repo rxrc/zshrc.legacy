@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.0.1
 
 - Improvements to README.
 

@@ -62,6 +62,21 @@ fi
 
 Updating is handled via the normal [zgen] update commands.
 
+Here is an example of a Zsh function that will provide a one-step update:
+
+```zsh
+# Upgrade zshrc.
+function zshupg () {
+  if ! [[ -d $HOME/.zgen.zsh ]]; then
+    echo 'zgen is not installed.'
+    exit 1
+  fi
+
+  zgen selfupdate
+  zgen update
+}
+```
+
 ## promptline.vim
 
 This configuration will load `~/.promptline.zsh`
@@ -69,6 +84,7 @@ which can be generated or updated using [promptline.vim]
 by running `:PromptlineSnapshot! ~/.promptline.zsh` from Vim.
 
 [promptline.vim]: https://github.com/edkolev/promptline.vim
+
 
 ## Customization
 

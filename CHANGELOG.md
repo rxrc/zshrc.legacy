@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Improvements to README.
+
 ## 1.0.0
 
 - Add development mode using Gulp.

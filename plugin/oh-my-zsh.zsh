@@ -10,6 +10,7 @@ plugins=(
   heroku
   bower
   pyenv python pip
+  virtualenv virtualenvwrapper
   golang
   lein
   vim-interaction
@@ -17,10 +18,6 @@ plugins=(
 
 if [[ -f /etc/arch-release ]]; then
   plugins+=( archlinux systemd )
-fi
-
-if [[ -x $(command -v virtualenvwrapper) ]]; then
-  plugins+=( virtualenvwrapper )
 fi
 
 export OH_MY_ZSH_PLUGINS="$plugins"

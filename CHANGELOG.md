@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.0.2
 
 - No longer required to run `gulp install`
   after entering development mode.

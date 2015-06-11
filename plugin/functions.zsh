@@ -74,10 +74,12 @@ function vimupg () {
     return 1
   fi
 
-  vim -c PlugUpgrade -c qall
-  vim -c PlugUpdate -c qall
-  vim -c PlugInstall -c qall
-  vim -c PlugClean! -c qall
+  vimrc=$HOME/.vimrc
+
+  vim -u $vimrc -c PlugUpgrade -c qall
+  vim -u $vimrc -c PlugUpdate -c qall
+  vim -u $vimrc -c PlugInstall -c qall
+  vim -u $vimrc -c PlugClean! -c qall
 }
 
 # Upgrade zshrc.

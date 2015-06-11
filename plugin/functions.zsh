@@ -69,23 +69,27 @@ function tmuxupg () {
 
 # Upgrade vimrc.
 function vimupg () {
-  if ! [[ -d $HOME/.vim/bundle/neobundle.vim ]]; then
-    echo 'NeoBundle is not installed.'
+  if ! [[ -e $HOME/.vim/autoload/plug.vim ]]; then
+    echo 'vim-plug is not installed.'
     return 1
   fi
 
   vimrc=$HOME/.vimrc
 
   vim -N -u $vimrc -c \
-    "try | NeoBundleUpdate $* | finally | qall! | endtry" \
+    "try | PlugUpgrade $* | finally | qall! | endtry" \
     -U NONE -i NONE -V1 -e -s
 
   vim -N -u $vimrc -c \
-    "try | NeoBundleInstall $* | finally | qall! | endtry" \
+    "try | PlugUpdate $* | finally | qall! | endtry" \
     -U NONE -i NONE -V1 -e -s
 
   vim -N -u $vimrc -c \
-    "try | NeoBundleClean! $* | finally | qall! | endtry" \
+    "try | PlugInstall $* | finally | qall! | endtry" \
+    -U NONE -i NONE -V1 -e -s
+
+  vim -N -u $vimrc -c \
+    "try | PlugClean! $* | finally | qall! | endtry" \
     -U NONE -i NONE -V1 -e -s
 }
 

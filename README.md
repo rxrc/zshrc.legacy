@@ -127,10 +127,10 @@ Enter development mode with
 
 ```bash
 $ gulp dev
-$ gulp install
 ```
 
-Have gulp watch for changes with
+After entering development mode,
+have gulp watch for changes with
 
 ```bash
 $ gulp
@@ -144,7 +144,6 @@ $ gulp nodev
 
 [Gulp]: http://gulpjs.com/
 [npm]: https://www.ruby-lang.org/en/
-
 
 ## Contributing
 

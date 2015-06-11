@@ -13,22 +13,24 @@ branchInitial = 'master'
 branch = "#{child_process.execSync('git rev-parse --abbrev-ref HEAD')}".trim()
 pluginPath = "#{homePath}/.zgen/local/zshrc-#{branch}"
 
-zgenReset = () -> del("#{homePath}/.zgen/init.zsh", {force: true})
+zgenReset = -> del("#{homePath}/.zgen/init.zsh", {force: true})
 
 gulp.task 'default', ['watch']
+
+gulp.task 'dev', ['clean', 'replace', 'install']
+
+gulp.task 'nodev', ['clean'], ->
+  gulp.src("#{homePath}/.zshrc")
+  .pipe $.replace("branch='#{branch}'", "branch='#{branchInitial}'")
+  .pipe gulp.dest(homePath)
 
 gulp.task 'clean', ->
   del(pluginPath, {force: true})
   zgenReset()
 
-gulp.task 'dev', ['clean'], ->
+gulp.task 'replace', ->
   gulp.src("#{homePath}/.zshrc")
   .pipe $.replace("branch='#{branchInitial}'", "branch='#{branch}'")
-  .pipe gulp.dest(homePath)
-
-gulp.task 'nodev', ['clean'], ->
-  gulp.src("#{homePath}/.zshrc")
-  .pipe $.replace("branch='#{branch}'", "branch='#{branchInitial}'")
   .pipe gulp.dest(homePath)
 
 gulp.task 'install', ->

@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+- No longer required to run `gulp install`
+  after entering development mode.
+
 ## 1.0.1
 
 - Improvements to README.

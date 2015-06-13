@@ -9,7 +9,7 @@ plugins=(
   knife vagrant
   heroku
   bower
-  pyenv python pip
+  python pip
   golang
   lein
   vim-interaction

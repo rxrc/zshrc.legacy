@@ -10,6 +10,7 @@ if ! zgen saved; then
   done
 
   zgen load rxfork/oh-my-zsh plugins/systemd systemd
+  zgen load rxfork/oh-my-zsh plugins/pyenv pyenv
 
   zgen save
 fi

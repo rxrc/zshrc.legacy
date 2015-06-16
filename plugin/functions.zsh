@@ -67,6 +67,16 @@ function tmuxupg () {
   $HOME/.tmux/plugins/tpm/scripts/update_plugin.sh all
 }
 
+# Open Viewnior and hide output.
+function vn () {
+  if ! [[ -x $(command -v viewnior ) ]]; then
+    echo 'Viewnior is not installed.'
+    exit 1
+  fi
+
+  nohup viewnior $1 &>/dev/null &
+}
+
 # Upgrade vimrc.
 function vimupg () {
   if ! [[ -e $HOME/.vim/autoload/plug.vim ]]; then

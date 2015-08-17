@@ -10,6 +10,9 @@
 # Copy to clipboard with xclip.
 [[ -x $(command -v xclip ) ]] && alias cb='xclip -selection clipboard'
 
+# Start default tmuxinator session.
+[[ -x $(command -v mux ) ]] && alias mx='mux start default'
+
 # Fixes a bug with rake and square brackets.
 alias rake='noglob bundle exec rake'
 

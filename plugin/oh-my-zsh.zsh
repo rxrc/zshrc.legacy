@@ -12,6 +12,7 @@ plugins=(
   python pip
   golang
   lein
+  meteor
   vim-interaction
 )
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Wrap install script in function.
+
 ## 1.0.2
 
 - No longer required to run `gulp install`

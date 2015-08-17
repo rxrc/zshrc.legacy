@@ -46,6 +46,11 @@ if [[ -d $HOME/.npm/bin ]]; then
   PATH=$HOME/.npm/bin:$PATH
 fi
 
+# Add meteor binary to path.
+if [[ -d $HOME/.meteor ]]; then
+  PATH=$HOME/.meteor:$PATH
+fi
+
 # Add Cabal installed binaries to path.
 if [[ -d $HOME/.cabal ]]; then
   PATH=$HOME/.cabal/bin:$PATH

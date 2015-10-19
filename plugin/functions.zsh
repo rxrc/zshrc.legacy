@@ -62,9 +62,9 @@ function tmuxupg () {
     return 2
   fi
 
-  $HOME/.tmux/plugins/tpm/bin/update_plugin.sh all && \
-  $HOME/.tmux/plugins/tpm/bin/install_plugins.sh   && \
-  $HOME/.tmux/plugins/tpm/bin/update_plugin.sh all
+  $HOME/.tmux/plugins/tpm/bin/update_plugins all && \
+  $HOME/.tmux/plugins/tpm/bin/install_plugins    && \
+  $HOME/.tmux/plugins/tpm/bin/update_plugins all
 }
 
 # Open Viewnior and hide output.

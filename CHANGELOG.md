@@ -3,6 +3,7 @@
 ## HEAD
 
 - Use local gulp.
+- Update development dependences
 
 ## 1.0.3
 

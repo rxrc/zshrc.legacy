@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Use local gulp.
+
 ## 1.0.3
 
 - Wrap install script in function.

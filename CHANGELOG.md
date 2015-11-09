@@ -1,13 +1,14 @@
 # Changelog
 
-## HEAD
+## 1.1.1
 
 - Add `npm-debug.log` to .gitignore.
+- Minor README updates.
 
 ## 1.1.0
 
 - Use local gulp.
-- Update development dependences
+- Update development dependences.
 
 ## 1.0.3
 

@@ -1,6 +1,10 @@
 if ! zgen saved; then
   echo "Creating a zgen save".
 
+  if [[ -e /etc/profile.d/fzf.zsh ]]; then
+    zgen load /etc/profile.d/fzf.zsh
+  fi
+
   zgen load rxrc/zshrc plugin
   zgen oh-my-zsh
 

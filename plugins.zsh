@@ -5,6 +5,10 @@ if ! zgen saved; then
     zgen load /etc/profile.d/fzf.zsh
   fi
 
+  if [[ -e $HOME/.promptline.zsh ]]; then
+    zgen load $HOME/.promptline.zsh
+  fi
+
   zgen load rxrc/zshrc plugin
   zgen oh-my-zsh
 

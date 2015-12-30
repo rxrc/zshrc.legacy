@@ -8,6 +8,13 @@ export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
 export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CACHE_HOME=$HOME/.cache
 
+# Set fzf default command.
+if [[ -x $(command -v fzf) && \
+      -x $(command -v git) && \
+      -x $(command -v ag) ]]; then
+  export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD || ag -g "")'
+fi
+
 # Set Go path.
 if [[ -d $HOME/go ]]; then
   export GOPATH="$HOME/go"

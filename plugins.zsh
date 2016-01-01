@@ -20,5 +20,8 @@ if ! zgen saved; then
   zgen load rxfork/oh-my-zsh plugins/systemd systemd
   zgen load rxfork/oh-my-zsh plugins/pyenv pyenv
 
+  zgen load zsh-users/zsh-syntax-highlighting
+  zgen oh-my-zsh plugins/history-substring-search
+
   zgen save
 fi

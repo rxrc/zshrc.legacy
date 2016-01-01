@@ -1,6 +1,5 @@
 # Oh-My-Zsh plugins to load.
 plugins=(
-  history-substring-search
   cp extract rsync
   tmux tmuxinator
   git github

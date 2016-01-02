@@ -1,6 +1,3 @@
-# Load Oh My Zsh configuration.
-source oh-my-zsh.zsh
-
 if ! zgen saved; then
   echo "Creating a zgen save".
 
@@ -15,6 +12,7 @@ if ! zgen saved; then
   fi
 
   # Load Oh My Zsh.
+  zgen load rxrc/zshrc oh-my-zsh
   zgen oh-my-zsh
 
   # Oh-My-Zsh plugins to load.

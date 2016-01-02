@@ -1,3 +1,6 @@
+# Load Oh My Zsh configuration.
+source oh-my-zsh.zsh
+
 if ! zgen saved; then
   echo "Creating a zgen save".
 
@@ -11,14 +14,33 @@ if ! zgen saved; then
     zgen load $HOME/.promptline.zsh
   fi
 
-  # Load this plugin and initialize Oh My Zsh.
-  zgen load rxrc/zshrc plugin
+  # Load Oh My Zsh.
   zgen oh-my-zsh
 
-  # The Oh My Zsh settings and the plugins to load
-  # are defined in plugin/oh-my-zsh.zsh.
-  OH_MY_ZSH_PLUGINS=(${(ps: :)${OH_MY_ZSH_PLUGINS}})
-  for plugin in $OH_MY_ZSH_PLUGINS; do
+  # Oh-My-Zsh plugins to load.
+  oh_my_zsh_plugins=(
+    cp extract rsync
+    tmux tmuxinator
+    git github
+    nvm
+    rbenv ruby gem rake bundler
+    knife vagrant
+    heroku
+    bower
+    python pip
+    golang
+    lein
+    meteor
+    vim-interaction
+  )
+
+  # Only load some plugins on Arch Linux.
+  if [[ -f /etc/arch-release ]]; then
+    oh_my_zsh_plugins+=( archlinux systemd )
+  fi
+
+  # Load Oh My Zsh plugins.
+  for plugin in $oh_my_zsh_plugins; do
     zgen oh-my-zsh plugins/$plugin
   done
 
@@ -26,8 +48,12 @@ if ! zgen saved; then
   zgen load rxfork/oh-my-zsh plugins/systemd systemd
   zgen load rxfork/oh-my-zsh plugins/pyenv pyenv
 
+  # Load this plugin.
+  zgen load rxrc/zshrc plugin
+
   # The history-substring-search plugin must be loaded
   # after the zsh-syntax-highlighting plugin.
+  # These plugins must be loaded last.
   zgen load zsh-users/zsh-syntax-highlighting
   zgen oh-my-zsh plugins/history-substring-search
 

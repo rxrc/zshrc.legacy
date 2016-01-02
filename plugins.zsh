@@ -32,6 +32,7 @@ if ! zgen saved; then
     lein
     meteor
     vim-interaction
+    vi-mode
   )
 
   # Only load some plugins on Arch Linux.

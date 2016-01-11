@@ -44,7 +44,7 @@ if [[ -d $HOME/.local/bin ]]; then
 fi
 
 # Add Go binaries to path.
-if [[ -d $GOPATH//bin ]]; then
+if [[ ! -z "$GOPATH" && -d $GOPATH/bin ]]; then
   PATH=$GOPATH/bin:$PATH
 fi
 

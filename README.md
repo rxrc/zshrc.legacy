@@ -19,6 +19,13 @@ This configuration system works as a meta-plugin:
 all desired Zsh plugins are loaded from `plugins.zsh` using [zgen].
 Overall configuration then follows a normal plugin structure.
 
+Display a quick reference of custom binds, aliases, and functions
+defined by this plugin with
+
+```
+$ zshrc
+```
+
 [zgen]: https://github.com/tarjoilija/zgen
 
 ## Installation

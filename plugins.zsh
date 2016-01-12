@@ -1,11 +1,6 @@
 if ! zgen saved; then
   echo "Creating a zgen save".
 
-  # Load fzf zsh plugin.
-  if [[ -e /etc/profile.d/fzf.zsh ]]; then
-    zgen load /etc/profile.d/fzf.zsh
-  fi
-
   # Load promptline.
   if [[ -e $HOME/.promptline.zsh ]]; then
     zgen load $HOME/.promptline.zsh
@@ -55,6 +50,11 @@ if ! zgen saved; then
   # These plugins must be loaded last.
   zgen load zsh-users/zsh-syntax-highlighting
   zgen oh-my-zsh plugins/history-substring-search
+
+  # Load fzf zsh plugin.
+  if [[ -e /etc/profile.d/fzf.zsh ]]; then
+    zgen load /etc/profile.d/fzf.zsh
+  fi
 
   zgen save
 fi

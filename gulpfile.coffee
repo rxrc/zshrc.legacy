@@ -13,7 +13,7 @@ branchInitial = 'master'
 branch = "#{child_process.execSync('git rev-parse --abbrev-ref HEAD')}".trim()
 pluginPath = "#{homePath}/.zgen/local/zshrc-#{branch}"
 
-zgenReset = -> del("#{homePath}/.zgen/init.zsh", {force: true})
+zgenReset = -> del.sync("#{homePath}/.zgen/init.zsh", {force: true})
 
 gulp.task 'default', ['watch']
 
@@ -25,7 +25,7 @@ gulp.task 'nodev', ['clean'], ->
   .pipe gulp.dest(homePath)
 
 gulp.task 'clean', ->
-  del(pluginPath, {force: true})
+  del.sync(pluginPath, {force: true})
   zgenReset()
 
 gulp.task 'replace', ->
@@ -52,7 +52,7 @@ gulp.task 'watch', ['install'], ->
       zgenReset()
 
     if file.event is 'unlink'
-      del(file.path, {force: true})
+      del.sync(file.path, {force: true})
       zgenReset()
 
     if file.relative is 'plugins.zsh' then zgenReset()

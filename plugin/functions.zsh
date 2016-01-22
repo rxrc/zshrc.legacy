@@ -19,7 +19,7 @@ function fe () { ff "*${1}" }
 
 # Update Arch Linux mirrorlist.
 function mirrorupg () {
-  sudo /usr/bin/python /usr/bin/reflector \
+  sudo reflector \
     --verbose -l 5 -c US -p https \
     --sort rate --save /etc/pacman.d/mirrorlist
 }

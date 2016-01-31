@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Use `npm start` and `npm stop`.
+
 ## 1.1.1
 
 - Add `npm-debug.log` to .gitignore.

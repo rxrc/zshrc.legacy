@@ -77,6 +77,16 @@ function vn () {
   nohup viewnior $1 &>/dev/null &
 }
 
+# Open Zathura and hide output.
+function za () {
+  if ! [[ -x $(command -v zathura ) ]]; then
+    echo 'Zathura is not installed.'
+    exit 1
+  fi
+
+  nohup zathura $1 &>/dev/null &
+}
+
 # Upgrade vimrc.
 function vimupg () {
   if ! [[ -e $HOME/.vim/autoload/plug.vim ]]; then

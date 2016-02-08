@@ -78,7 +78,7 @@ function vn () {
 }
 
 # Open Zathura and hide output.
-function za () {
+function zt () {
   if ! [[ -x $(command -v zathura ) ]]; then
     echo 'Zathura is not installed.'
     exit 1

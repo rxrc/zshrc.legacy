@@ -23,3 +23,14 @@ if [[ -x $(command -v aura) ]]; then
   alias aurin='aura -A'
   alias aurupg='aura -Au'
 fi
+
+# npm aliases.
+if [[ -x $(command -v npm) ]]; then
+  alias npmi='npm install --save'
+  alias npmid='npm install --save-dev'
+  alias npmu='npm uninstall --save'
+  alias npmud='npm uninstall --save-dev'
+  alias npmsw='npm shrinkwrap'
+  alias npmswd='npm shrinkwrap -dev'
+  alias npmrm='rm -rf node_modules'
+fi

@@ -21,6 +21,8 @@ function zshrc () {
     - fs finds by $name*
     - fe finds by *$name
   - tarz will create a tar archive.
+  - vn will spawn Viewnior.
+  - zt will spawn Zathura.
   - Shortcuts for git:
     - ghcl user/repo clones from GitHub
     - gitsed runs a sed command on all tracked files

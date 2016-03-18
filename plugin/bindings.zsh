@@ -1,6 +1,8 @@
-# Basic word movement.
+# Basic word and line movement.
 bindkey '^F' forward-word
-bindkey '^R' backward-word
+bindkey '^V' backward-word
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
 
 # Additional binds for history-substring-search.
 bindkey '^P' history-substring-search-up

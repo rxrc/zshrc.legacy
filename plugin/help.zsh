@@ -4,7 +4,8 @@ function zshrc () {
   - Leading any command with a space will not record it to history.
 
   [Binds]
-  - ^F and ^R move one word foward or backward.
+  - ^F and ^V move one word foward or backward.
+  - ^A and ^E move to beginning or end of line.
   - ^N and ^P navigate command history.
   - k and j navigate command history in Vi mode.
 

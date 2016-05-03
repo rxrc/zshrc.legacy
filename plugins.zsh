@@ -52,8 +52,8 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/history-substring-search
 
   # Load fzf zsh plugin.
-  if [[ -e /etc/profile.d/fzf.zsh ]]; then
-    zgen load /etc/profile.d/fzf.zsh
+  if [[ -e /usr/share/fzf/fzf.zsh ]]; then
+    zgen load /usr/share/fzf/fzf.zsh
   fi
 
   zgen save

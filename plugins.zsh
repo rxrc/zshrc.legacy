@@ -6,6 +6,9 @@ if ! zgen saved; then
     zgen load $HOME/.promptline.zsh
   fi
 
+  # Clone Base16 Shell.
+  zgen clone chriskempson/base16-shell
+
   # Load Oh My Zsh.
   zgen load rxrc/zshrc oh-my-zsh
   zgen oh-my-zsh

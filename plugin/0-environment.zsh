@@ -1,6 +1,31 @@
 # Set editor.
 export EDITOR='vim'
 
+# Set Base16 Shell path.
+if [[ -z $BASE16_SHELL ]]; then
+  export BASE16_SHELL=$HOME/.zgen/chriskempson/base16-shell-master
+fi
+
+# Set Base16 theme.
+if [[ -z $BASE16_THEME ]]; then
+  export BASE16_THEME=default
+fi
+
+# Set Base16 background type.
+if [[ -z $BASE16_TYPE ]]; then
+  export BASE16_TYPE=dark
+fi
+
+# Set Vim color scheme.
+if [[ -z $VIM_COLOR ]]; then
+  export VIM_COLOR=base16-$BASE16_THEME
+fi
+
+# Set Vim background.
+if [[ -z $VIM_BACKGROUND ]]; then
+  export VIM_BACKGROUND=$BASE16_TYPE
+fi
+
 # XDG Base Directory Specification.
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config

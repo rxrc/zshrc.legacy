@@ -1,6 +1,11 @@
 if ! zgen saved; then
   echo "Creating a zgen save".
 
+  # Load environment overrides.
+  if [[ -e $HOME/.environment.zsh ]]; then
+    zgen load $HOME/.environment.zsh
+  fi
+
   # Load promptline.
   if [[ -e $HOME/.promptline.zsh ]]; then
     zgen load $HOME/.promptline.zsh

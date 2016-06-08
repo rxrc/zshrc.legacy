@@ -1,4 +1,4 @@
-# Editor.
+# Set editor.
 export EDITOR='vim'
 
 # XDG Base Directory Specification.

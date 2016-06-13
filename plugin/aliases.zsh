@@ -4,6 +4,10 @@
 # Additional vim aliases.
 [[ -x $(command -v gvim) ]] && alias vv='gvim'
 
+# Additional vim aliases.
+[[ -x $(command -v nvim-qt) ]] \
+  && alias vvn='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim-qt'
+
 # ack is ack-grep on some systems.
 [[ -x $(command -v ack-grep) ]] && alias ack='ack-grep'
 

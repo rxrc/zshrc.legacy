@@ -7,8 +7,8 @@ if ! zgen saved; then
   fi
 
   # Load promptline.
-  if [[ -e $HOME/.promptline.zsh ]]; then
-    zgen load $HOME/.promptline.zsh
+  if [[ -e $HOME/.promptline.sh ]]; then
+    zgen load $HOME/.promptline.sh
   fi
 
   # Clone Base16 Shell.

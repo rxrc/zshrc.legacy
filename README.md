@@ -94,9 +94,9 @@ function zshupg () {
 
 ## promptline.vim
 
-This configuration will load `~/.promptline.zsh`
+This configuration will load `~/.promptline.sh`
 which can be generated or updated using [promptline.vim]
-by running `:PromptlineSnapshot! ~/.promptline.zsh` from Vim.
+by running `:PromptlineSnapshot! ~/.promptline.sh` from Vim.
 
 [promptline.vim]: https://github.com/edkolev/promptline.vim
 

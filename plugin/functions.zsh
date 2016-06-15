@@ -50,6 +50,16 @@ function tarz () {
   tar -czf $1.tar.gz $1
 }
 
+# Open neovim-qt and hide output.
+function nv () {
+  if ! [[ -x $(command -v nvim-qt ) ]]; then
+    echo 'neovim-qt is not installed.'
+    exit 1
+  fi
+
+  NVIM_TUI_ENABLE_TRUE_COLOR=1 nohup nvim-qt $1 &>/dev/null &
+}
+
 # Upgrade tmuxrc.
 function tmuxupg () {
   if ! [[ -d $HOME/.tmux/plugins/tpm ]]; then

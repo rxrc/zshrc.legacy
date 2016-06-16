@@ -1,5 +1,5 @@
 # Set editor.
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Set Base16 Shell path.
 if [[ -z $BASE16_SHELL ]]; then

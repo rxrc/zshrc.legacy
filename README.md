@@ -150,7 +150,7 @@ $ npm stop
 ```
 
 [Gulp]: http://gulpjs.com/
-[npm]: https://www.ruby-lang.org/en/
+[npm]: https://www.npmjs.com/
 
 ## Contributing
 

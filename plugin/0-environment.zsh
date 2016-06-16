@@ -35,9 +35,8 @@ export XDG_CACHE_HOME=$HOME/.cache
 
 # Set fzf default command.
 if [[ -x $(command -v fzf) && \
-      -x $(command -v git) && \
       -x $(command -v ag) ]]; then
-  export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD || ag -g "")'
+  export FZF_DEFAULT_COMMAND='(ag -g "")'
 fi
 
 # Set Go path.

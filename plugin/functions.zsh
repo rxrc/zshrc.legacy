@@ -50,6 +50,19 @@ function tarz () {
   tar -czf $1.tar.gz $1
 }
 
+function mx () {
+  if ! [[ -x $(command -v tmuxinator ) ]]; then
+    echo 'tmuxinator is not installed.'
+    exit 1
+  fi
+
+  if ! [[ -n "$1" ]]; then
+    tmuxinator start default
+  else
+    tmux attach -t $1 || tmux new-session -s $1
+  fi
+}
+
 # Open neovim-qt and hide output.
 function nv () {
   if ! [[ -x $(command -v nvim-qt ) ]]; then

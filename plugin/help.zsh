@@ -13,7 +13,7 @@ function zshrc () {
   - aurin and aurupg are AUR versions of pacin and pacupg.
   - cb will xclip a file to the clipboard.
   - gfup is git fetch --no-tags upstream.
-  - mx starts the default tmuxinator profile.
+  - mx starts the default tmuxinator profile or attaches to named session.
 
   [Functions]
   - Shortcuts to find:

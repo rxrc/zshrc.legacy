@@ -12,7 +12,7 @@ if ! zgen saved; then
   fi
 
   # Clone Base16 Shell.
-  zgen clone chriskempson/base16-shell
+  zgen clone rxfork/base16-shell stable
 
   # Load Oh My Zsh.
   zgen load rxrc/zshrc oh-my-zsh

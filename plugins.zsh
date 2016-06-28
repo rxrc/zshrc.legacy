@@ -53,16 +53,16 @@ if ! zgen saved; then
   # Load this plugin.
   zgen load rxrc/zshrc plugin
 
-  # The history-substring-search plugin must be loaded
-  # after the zsh-syntax-highlighting plugin.
-  # These plugins must be loaded last.
-  zgen load zsh-users/zsh-syntax-highlighting
-  zgen oh-my-zsh plugins/history-substring-search
-
   # Load fzf zsh plugin.
   if [[ -e /usr/share/fzf/fzf.zsh ]]; then
     zgen load /usr/share/fzf/fzf.zsh
   fi
+
+  # The history-substring-search plugin must be loaded
+  # after the zsh-syntax-highlighting plugin.
+  # These plugins must be loaded last.
+  zgen oh-my-zsh plugins/history-substring-search
+  zgen load zsh-users/zsh-syntax-highlighting
 
   zgen save
 fi

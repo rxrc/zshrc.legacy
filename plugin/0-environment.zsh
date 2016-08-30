@@ -3,7 +3,7 @@ export EDITOR='nvim'
 
 # Set Base16 Shell path.
 if [[ -z $BASE16_SHELL ]]; then
-  export BASE16_SHELL=$HOME/.zgen/rxfork/base16-shell-stable
+  export BASE16_SHELL=$HOME/.zgen/chriskempson/base16-shell-master/scripts
 fi
 
 # Set Base16 theme.

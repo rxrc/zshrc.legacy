@@ -1,5 +1,6 @@
-# Always use vim.
+# Always use nvim.
 [[ -x $(command -v nvim) ]] && alias vi='nvim'
+[[ -x $(command -v nvim) ]] && alias vim='nvim'
 
 # Additional vim aliases.
 [[ -x $(command -v nvim-qt) ]] && alias vv='nv'

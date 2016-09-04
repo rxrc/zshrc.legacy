@@ -8,6 +8,9 @@
 # ack is ack-grep on some systems.
 [[ -x $(command -v ack-grep) ]] && alias ack='ack-grep'
 
+# Add alias for tmuxinator.
+[[ -x $(command -v tmuxinator) ]] && alias mux='tmuxinator'
+
 # Copy to clipboard with xclip.
 [[ -x $(command -v xclip ) ]] && alias cb='xclip -selection clipboard'
 

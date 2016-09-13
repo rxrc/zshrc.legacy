@@ -32,6 +32,7 @@ if ! zgen saved; then
     golang
     lein
     meteor
+    httpie
     vim-interaction
     vi-mode
   )

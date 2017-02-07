@@ -21,7 +21,6 @@ if ! zgen saved; then
   # Oh-My-Zsh plugins to load.
   oh_my_zsh_plugins=(
     cp extract rsync
-    tmux tmuxinator
     git github
     nvm
     rbenv ruby gem rake bundler
@@ -36,6 +35,11 @@ if ! zgen saved; then
     vim-interaction
     vi-mode
   )
+
+  # Only load tmux plugins when tmux is installed.
+  if [[ -x $(command -v tmux ) ]]; then
+    oh_my_zsh_plugins+=( tmux tmuxinator )
+  fi
 
   # Only load some plugins on Arch Linux.
   if [[ -f /etc/arch-release ]]; then

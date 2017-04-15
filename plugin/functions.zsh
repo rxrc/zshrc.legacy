@@ -110,6 +110,19 @@ function zt () {
   nohup zathura $1 &>/dev/null &
 }
 
+# Upgrade nvimrc.
+function nvimupg () {
+  if ! [[ -e $XDG_CONFIG_HOME/nvim/autoload/plug.vim ]]; then
+    echo 'vim-plug is not installed.'
+    return 1
+  fi
+
+  nvim -c PlugUpgrade -c qall
+  nvim -c PlugUpdate -c qall
+  nvim -c PlugInstall -c qall
+  nvim -c PlugClean! -c qall
+}
+
 # Upgrade vimrc.
 function vimupg () {
   if ! [[ -e $HOME/.vim/autoload/plug.vim ]]; then

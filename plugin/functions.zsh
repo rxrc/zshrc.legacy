@@ -8,6 +8,8 @@ function ff () {
   find . -name "$1"
 }
 
+function yrx () { yarn run example $@ | yarn run bunyan }
+
 # Find: name [a]ll.
 function fa () { ff "*${1}*" }
 

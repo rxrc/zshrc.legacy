@@ -20,6 +20,8 @@ if ! zgen saved; then
 
   # Oh-My-Zsh plugins to load.
   oh_my_zsh_plugins=(
+    docker
+    docker-compose
     cp extract rsync
     git github
     nvm

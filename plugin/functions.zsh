@@ -9,6 +9,7 @@ function ff () {
 }
 
 function yrx () { yarn run example $@ | yarn run bunyan }
+function yrxi () { yarn run example:inspect $@ | yarn run bunyan; }
 
 # Find: name [a]ll.
 function fa () { ff "*${1}*" }

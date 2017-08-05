@@ -53,6 +53,10 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/$plugin
   done
 
+  if [[ -e $HOME/meltwater ]]; then
+    zgen load git@github.com:meltwater/mlabsh.git team
+  fi
+
   # Load custom forks of some Oh My Zsh plugins.
   zgen load rxfork/oh-my-zsh plugins/systemd systemd
   zgen load rxfork/oh-my-zsh plugins/pyenv pyenv
